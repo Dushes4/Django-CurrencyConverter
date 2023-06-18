@@ -40,10 +40,11 @@ def converter_page(request):
     last_update = check_last_update()
     if last_update > timedelta(minutes=5):
         update_rate()
-
-    hours = last_update.seconds // 3600
-    minutes = (last_update.seconds // 60) % 60
-    seconds = round(last_update.seconds % 60)
+        hours, minutes, seconds = 0, 0, 0
+    else:
+        hours = last_update.seconds // 3600
+        minutes = (last_update.seconds // 60) % 60
+        seconds = round(last_update.seconds % 60)
 
     if request.method == "GET":
         form = ConverterForm()
