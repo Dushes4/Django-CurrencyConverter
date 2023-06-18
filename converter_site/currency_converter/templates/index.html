@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="center">
+        <h1>Конвертер валюты</h1>
+    </div>
+    <div class="content">
+      <div class="title"></div>
+      <form method="POST" class="converter_form" action="." >
+            <table>
+                <tr>
+                    <th>Из валюты:</th>
+                    <th>В валюту:</th>
+                </tr>
+                <tr>
+                    <td>{{form.from_currency}}</td>
+                    <td>{{form.to_currency}}</td>
+                </tr>
+                <tr>
+                    <td>{{form.value}}</td>
+                    <td>{{answer}}</td>
+                </tr>
+            </table>
+        {% csrf_token %}
+
+
+      <div class="button">
+
+          <input type="submit" value="Перевести" class="button">
+      </div>
+
+      </form>
+    </div>
+    <div class="center">
+        Данные обновлены {{hours}} часов {{minutes}} минут {{seconds}} секунд назад
+    </div>
+</body>
+</html>

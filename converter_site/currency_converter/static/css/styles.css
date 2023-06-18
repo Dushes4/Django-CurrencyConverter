@@ -1,0 +1,32 @@
+.content {
+    width: 300px;
+    margin: auto;
+    font-family: Calibri;
+    border: solid black 1px;
+}
+
+h1 {
+    font-family: Calibri;
+}
+
+td, th {
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+.field {
+    width: 50px;
+}
+
+.button {
+    margin: 5px auto;
+    width: 150px;
+}
+
+.center {
+    margin: 10px auto;
+    width: 500px;
+    text-align: center;
+    font-family: Calibri;
+}
